@@ -6,17 +6,19 @@ export default function App() {
   
   const [mail, onChangeText] = React.useState('');
   const [psw, onChangeNumber] = React.useState('');
-  const imgLocal = require('./assets/images/login.png');
+  const loginPic = require('./assets/images/login.png');
+  const arrow = {uri: 'https://cdn-icons-png.flaticon.com/512/154/154630.png'};
 
   return (
     <View style={{flex: 1}}>
     <View style={styles.header}> 
-      <Text style={styles.headerText}>Bienvenido de vuelta</Text>
+      <Image style= {styles.arrow} source={arrow}/>
+      <Text style={styles.headerText}> Bienvenido de vuelta</Text>
     </View>
     <View style={styles.picView}>
       <Image 
           style={styles.logPic}
-          source={imgLocal}
+          source={loginPic}
         />
     </View>
       <View style={{flex: 4}}>  
@@ -42,7 +44,7 @@ export default function App() {
         </View>
         <View style={styles.bottomSection}>
           <Text style={{fontSize:15,}}>Olvidaste la clave?</Text>
-          <Text style={{color: '#642684', fontSize:15,}} >Crear cuenta</Text>
+          <Text style={{color: '#642684', fontSize:15, textDecorationLine: 'underline'}} >Crear cuenta</Text>
         </View>
       </View>  
     </View>
@@ -52,9 +54,17 @@ export default function App() {
 const styles = StyleSheet.create({
   header:{
     flex: 1,
-    marginTop: 50,
-    marginLeft: 30,
-    justifyContent: 'center',
+    marginTop: 60,
+    marginLeft: 20,
+    flexDirection: 'row'
+  },
+
+  arrow:{
+    resizeMode: 'contain',
+    marginTop: 5,
+    width: 25,
+    height: 25,
+    marginRight: 10,
   },
 
   logPic:{
