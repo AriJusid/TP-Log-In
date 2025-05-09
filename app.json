@@ -1,29 +1,30 @@
 {
   "expo": {
-    "name": "TPLOGIN",
+    "name": "Lynk",
     "slug": "TPLOGIN",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/login.png",
+    "icon":  "./assets/images/logoFinal.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/login.png",
+      "image":  "./assets/images/logoFinal.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
       "supportsTablet": true
     },
+
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/login.png",
+        "foregroundImage": "./assets/images/logoFinal.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/images/logoFinal.png"
     }
   }
 }

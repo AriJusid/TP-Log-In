@@ -41,8 +41,8 @@ export default function App() {
             color="#642684"/>
         </View>
         <View style={styles.bottomSection}>
-          <Text >Olvidaste la clave?</Text>
-          <Text style={{color: '#642684'}} >Crear cuenta</Text>
+          <Text style={{fontSize:15,}}>Olvidaste la clave?</Text>
+          <Text style={{color: '#642684', fontSize:15,}} >Crear cuenta</Text>
         </View>
       </View>  
     </View>
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     borderColor: '#642684',
   },
   bottomSection: {
-    flex: 1, 
+    flex: 2, 
     alignItems: 'center',
     justifyContent: 'center',
   },
