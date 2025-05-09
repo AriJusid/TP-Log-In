@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, TextInput, View, Button, Image } from 'react-native';
+import { StyleSheet, Text, TextInput, View, Button, Image, KeyboardAvoidingView, ScrollView } from 'react-native';
+import HideWithKeyboard from 'react-native-hide-with-keyboard';
+
 
 export default function App() {
   
@@ -12,17 +14,23 @@ export default function App() {
   return (
     <View style={{flex: 1}}>
     <View style={styles.header}> 
+
       <Image style= {styles.arrow} source={arrow}/>
       <Text style={styles.headerText}> Bienvenido de vuelta</Text>
+
     </View>
     <View style={styles.picView}>
+    <HideWithKeyboard>
       <Image 
           style={styles.logPic}
           source={loginPic}
         />
+    </HideWithKeyboard>
+
     </View>
       <View style={{flex: 4}}>  
-        <View style={styles.container}>
+        <KeyboardAvoidingView style={styles.container}>
+        <ScrollView contentContainerStyle={styles.scrollView}>
           <TextInput 
             style = {styles.input}
             onChangeText={onChangeText}
@@ -36,7 +44,9 @@ export default function App() {
             secureTextEntry
             />
           <StatusBar style={styles.status} />
-        </View>
+          </ScrollView>
+        </KeyboardAvoidingView>
+        
         <View style={styles.btnView}>
           <Button style={styles.btn}
             title="Ingresar"
