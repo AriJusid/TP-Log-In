@@ -11,6 +11,17 @@ export default function App() {
   const bgLogin = require('./assets/images/bgLogin.png');
   const arrow = {uri: 'https://cdn-icons-png.flaticon.com/512/154/154630.png'};
 
+  /*firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in
+      var email = user.email;
+      // ...
+  } else {
+      // User is not signed in
+      // ...
+  }
+});
+firebase.auth().signInWithEmailAndPassword(email, password);*/
   return (
     <View style={{flex: 1}}>
     <ImageBackground source={bgLogin} resizeMode="cover" style={{flex: 1, justifyContent: 'center'}}>
